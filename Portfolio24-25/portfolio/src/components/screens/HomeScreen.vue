@@ -1,23 +1,22 @@
 <template>
-    <v-col class="background-image-container bg-background h-screen w-100 d-flex justify-center flex-column ma-0">
-
-        <v-col class="d-flex flex-row justify-center align-center">
-            <v-contianer class="bg-primary d-flex flex-row align-center justify-center rounded-xl py-1 px-6 elevation-4">
-                <h2 class="font-weight-bold text-colortext ma-2">Introduction</h2>
-                <h2 class="font-weight-bold text-colortext ma-2">Education</h2>
-                <h2 class="font-weight-bold text-colortext ma-2">Skills</h2>
-            </v-contianer>
-            <v-spacer/>
-            <v-container class="bg-primary rounded-circle mx-4 my-1 pa-1 elevation-4 d-flex justify-center align-center" style="height: 64px; width: 64px;">
-                <v-icon class="text-colortext1">mdi-gmail</v-icon>
-            </v-container>
-            <v-container class="bg-primary rounded-circle mx-4 my-1 pa-1 elevation-4 d-flex justify-center align-center" style="height: 64px; width: 64px;">
-                <v-icon class="text-colortext1">mdi-linkedin</v-icon>
-            </v-container>
-            <v-container class="bg-primary rounded-circle mx-4 my-1 pa-1 elevation-4 d-flex justify-center align-center" style="height: 64px; width: 64px;">
-                <v-icon class="text-colortext1">mdi-book-account</v-icon>
-            </v-container>
-        </v-col>
+    <v-col class="nav-bar d-flex flex-row justify-center align-center ma-0" style="position: sticky; top: 0; z-index: 999;">
+        <div class="bg-primary d-flex flex-row align-center justify-center rounded-xl py-1 px-6 elevation-4">
+            <h2 @click="scrollToSection('introduction')" class="font-weight-bold text-colortext ma-2 cursor-pointer">Introduction</h2>
+            <h2 @click="scrollToSection('education')" class="font-weight-bold text-colortext ma-2 cursor-pointer">Education</h2>
+            <h2 @click="scrollToSection('skills')" class="font-weight-bold text-colortext ma-2 cursor-pointer">Skills</h2>
+        </div>
+        <v-spacer/>
+        <v-container class="bg-primary rounded-circle mx-4 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" style="height: 64px; width: 64px;">
+            <v-icon class="text-colortext1">mdi-gmail</v-icon>
+        </v-container>
+        <v-container class="bg-primary rounded-circle mx-4 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" style="height: 64px; width: 64px;">
+            <v-icon class="text-colortext1">mdi-linkedin</v-icon>
+        </v-container>
+        <v-container class="bg-primary rounded-circle mx-4 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" style="height: 64px; width: 64px;">
+            <v-icon class="text-colortext1">mdi-book-account</v-icon>
+        </v-container>
+    </v-col>
+    <v-col class="background-image-container bg-background h-screen w-100 d-flex justify-center flex-column ma-0 py-0">
 
         <v-container class="d-flex flex-column justify-center align-center h-100 w-100">
             <v-container class="d-flex flex-column align-center h-50 w-66 rounded-lg elevation-4 pa-0" style="max-width: 760px">
@@ -40,13 +39,26 @@
                 </v-container>
             </v-container>   
         </v-container>
-
-        
     </v-col>
 
-    <v-col class="bg-blue h-screen w-100 ma-0">
+    <v-section ref="introduction" class="bg-green h-screen w-100 h-screen ma-0">
+        <v-col class="h-screen">
+            <h1>Introduction</h1>
+        </v-col>
+    </v-section>
 
-    </v-col>
+    <v-section ref="education" class="bg-green h-screen w-100 h-screen ma-0">
+        <v-col class="h-screen">
+            <h1>Education</h1>
+        </v-col>
+    </v-section>
+
+    <v-section ref="skills" class="bg-green h-screen w-100 h-screen ma-0">
+        <v-col class="h-screen">
+            <h1>Skills</h1>
+        </v-col>
+    </v-section>
+
 </template>
 
 <style scoped>
@@ -58,5 +70,19 @@
 </style>
 
 <script setup>
+    import { ref } from 'vue';
 
+    const introduction = ref(null);
+    const education = ref(null);
+    const skills = ref(null);
+
+    const scrollToSection = (section) => {
+        if (section === 'introduction' && introduction.value) {
+            introduction.value.scrollIntoView({ behavior: 'smooth' });
+        } else if (section === 'education' && education.value) {
+            education.value.scrollIntoView({ behavior: 'smooth' });
+        } else if (section === 'skills' && skills.value) {
+            skills.value.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 </script>
