@@ -31,11 +31,11 @@ export default createVuetify({
       dark: {
         light: false,
         colors: {
-          background: colors.blueGrey.darken3,
-          primary: colors.brown.darken4,
-          secondary: colors.brown.darken3,
-          tertiary: colors.blueGrey.darken2,
-          colortext: colors.blueGrey.lighten3,
+          background: colors.grey.darken3,
+          primary: colors.shades.black,
+          secondary: colors.grey.darken2,
+          tertiary: colors.grey.darken1,
+          colortext: colors.shades.white,
           colortext2: colors.shades.white,
         }
       }
