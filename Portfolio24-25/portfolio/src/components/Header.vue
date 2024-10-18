@@ -34,13 +34,6 @@
     </v-col>
 </template>
 
-<style>
-    .nav-bar-item :hover {
-        color: rgb(255, 136, 0);
-        transition: background-color color 0.2s ease;
-    }
-</style>
-
 <script setup>
 
     const props = defineProps({
