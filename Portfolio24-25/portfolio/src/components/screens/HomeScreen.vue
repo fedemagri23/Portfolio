@@ -15,8 +15,8 @@
             <h2 @click="scrollToSection('projects')" class="nav-bar-item font-weight-medium mx-2 cursor-pointer">Projects</h2>
         </div>
         <v-spacer/>
-        <v-container class="nav-bar-item bg-primary rounded-circle mx-3 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" style="height: 38px; width: 38px;">
-            <v-icon @click="toggleTheme" class="text-colortext1" size="18">mdi-theme-light-dark</v-icon>
+        <v-container @click="toggleTheme" class="nav-bar-item bg-primary rounded-circle mx-3 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" style="height: 38px; width: 38px;">
+            <v-icon class="text-colortext1" size="18">mdi-theme-light-dark</v-icon>
         </v-container>
         <v-container class="nav-bar-item bg-primary rounded-circle mx-3 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" style="height: 58px; width: 58px;">
             <v-icon class="text-colortext1">mdi-gmail</v-icon>
