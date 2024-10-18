@@ -71,7 +71,7 @@
                         <v-container
                             class="bg-secondary w-100 border-md rounded d-flex flex-row justify-center align-center cursor-pointer"
                         >
-                            <h1>First Certificate in English</h1>
+                            <h1>Cambridge: <b>First Certificate in English</b></h1>
                             <v-icon class="text-colortext1 mx-2" size="28">mdi-download</v-icon>
                         </v-container>
                     </a>
@@ -108,14 +108,17 @@
 
             <transition name="slide">
                 <div v-if="showSkillNav" class="d-flex flex-row align-center justify-center py-2 px-6 w-50" style="position: fixed; top: 10vh; right: 0; z-index: 9999;">
-                    <v-container @click="scrollToSection('languages')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex justify-center align-center">
-                        <h3>Programming languages</h3>
+                    <v-container @click="scrollToSection('languages')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex d-row justify-center align-center">
+                        <v-icon class="mx-2" size="28">mdi-keyboard</v-icon>
+                        <h3 class="font-weight-medium">Programming languages</h3>
                     </v-container>
-                    <v-container @click="scrollToSection('frameworks')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex justify-center align-center">
-                        <h3>Frameworks</h3>
+                    <v-container @click="scrollToSection('frameworks')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex d-row justify-center align-center">
+                        <v-icon class="mx-2" size="28">mdi-electron-framework</v-icon>
+                        <h3 class="font-weight-medium">Frameworks</h3>
                     </v-container>
-                    <v-container @click="scrollToSection('knowledge')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex justify-center align-center">
-                        <h3>Other knowledge</h3>
+                    <v-container @click="scrollToSection('knowledge')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex d-row justify-center align-center">
+                        <v-icon class="mx-2" size="28">mdi-brain</v-icon>
+                        <h3 class="font-weight-medium">Other knowledge</h3>
                     </v-container>
                 </div>
             </transition>
