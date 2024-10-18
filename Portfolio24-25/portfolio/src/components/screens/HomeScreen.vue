@@ -18,7 +18,7 @@
         <v-container @click="toggleTheme" class="nav-bar-item bg-primary rounded-circle mx-3 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" style="height: 38px; width: 38px;">
             <v-icon class="text-colortext1" size="18">mdi-theme-light-dark</v-icon>
         </v-container>
-        <a href="mailto:fedemagri23@gmail.com?subject=Portfolio%20Contact&body=Hello,%20I%20am%20interested%20in%20your%20work"
+        <a href="mailto:fedemagri23@gmail.com"
             class="nav-bar-item bg-primary rounded-circle mx-3 my-1 pa-1 elevation-4 d-flex justify-center align-center cursor-pointer" 
             style="height: 58px; width: 58px; text-decoration: none;"
         >
