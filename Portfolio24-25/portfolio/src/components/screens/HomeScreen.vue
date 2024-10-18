@@ -10,11 +10,12 @@
 
         <v-container class="d-flex flex-column justify-center align-center h-100 w-100">
             <v-container class="d-flex flex-column align-center h-50 w-66 rounded-lg elevation-4 pa-0" style="max-width: 760px">
-                <v-container class="bg-primary w-100 h-50 rounded-t-lg d-flex flex-row align-center pa-12">
-                    <v-container class="bg-tertiary rounded-circle" style="min-width: 96px; min-height: 96px; max-width: 96px; max-height: 96px;"/>
+                <v-container class="bg-primary w-100 h-75 rounded-t-lg d-flex flex-row align-center pa-12">
+                    <v-container class="profile-image-container bg-tertiary rounded-circle"/>
                     <v-container>
-                        <h1 class="text-colortext font-weight-medium">Hey! I'am Federico Magri</h1>
-                        <h3 class="text-colortext font-weight-light"><b><u>Computer Engineering</u></b> student from Argentina</h3>
+                        <h1 class="text-colortext font-weight-medium" style="font-size: 2rem; line-height: 0.1;">Hey! I'am</h1>
+                        <h1 class="text-colortext font-weight-medium" style="font-size: 3rem;">Federico Magri</h1>
+                        <h2 class="text-colortext font-weight-light"><b><u>Computer Engineering</u></b> student from Argentina</h2>
                     </v-container>
                 </v-container>
                 <v-container class="opacity-90 bg-tertiary d-flex flex-column justify-center align-center h-100 w-100 rounded-b-lg pa-0">
@@ -22,8 +23,9 @@
                         <v-btn @click="scrollToSection('about')" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px;">
                             See portfolio
                         </v-btn>
-                        <v-btn class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px;">
-                            let's talk! ▶
+                        <v-btn @click="openWhatsApp()" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px;">
+                            <v-icon class="mr-2" size="22">mdi-whatsapp</v-icon>
+                            let's talk!
                         </v-btn>
                     </v-container>
                 </v-container>
@@ -73,6 +75,8 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-language-c</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">C & C++</h1>
                         </v-container>
+                        <v-progress-linear color="green" model-value="90" :height="6"></v-progress-linear>
+                        <br>
                         <p class="font-weight-medium">
                             One of my favorite programming languages. Thanks to <b>C</b>, I developed my knowledge and skills regarding the internal workings of computers and how programs, compilers, and linkeditors work.
                         </p>
@@ -92,6 +96,8 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-language-java</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">Java</h1>
                         </v-container>
+                        <v-progress-linear color="green" model-value="80" :height="6"></v-progress-linear>
+                        <br>
                         <p class="font-weight-medium">
                             <b>Java</b> is the language I use the most today due to my studies.
                         </p>
@@ -121,6 +127,17 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-language-ruby</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">Ruby</h1>
                         </v-container>
+                        <v-progress-linear color="yellow" model-value="65" :height="6"></v-progress-linear>
+                        <br>
+                        <p class="font-weight-medium text-align-justify">
+                            I have a solid foundation in Ruby, which I explored extensively during my university studies. Its elegant syntax and focus on simplicity make it a 
+                            pleasure to work with.
+                        </p>
+                        <p class="font-weight-medium text-align-justify">
+                            I’m well-versed in Ruby's core features, including collections (arrays and hashes), the splat operator, and advanced techniques like metaprogramming and
+                            closures. While I haven't used Ruby in a professional context or with any frameworks, my understanding of its principles equips me with a <b>versatile skill</b>
+                            set for various programming challenges.
+                        </p>
                     </v-col>
 
                     <v-col xs="6" sm="6" md="4" lg="4" xl="2" class="d-flex flex-column align-center border-lg pa-4">
@@ -128,6 +145,15 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-language-javascript</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">JavaScript</h1>
                         </v-container>
+                        <v-progress-linear color="green" model-value="65" :height="6"></v-progress-linear>
+                        <br>
+                        <p class="font-weight-medium text-align-justify">
+                            JavaScript is my go-to language for making websites interactive and engaging. With its powerful features, I can create dynamic user interfaces that respond to 
+                            actions in real time. Whether it's animating elements, handling form submissions, or fetching data from <b>APIs</b>, JavaScript helps me bring ideas to life. 
+                            I also enjoy using modern JavaScript techniques, like <b>ES6</b> features and async/await, which make my code cleaner and more efficient. Plus, with <b>Node.js</b>, 
+                            I dive into server-side development, allowing me to build full-stack applications that seamlessly connect the front end with the back end. To get a clearer picture 
+                            of my skills, feel free to check out my projects below!
+                        </p>
                     </v-col>
 
                     <v-col xs="6" sm="6" md="4" lg="4" xl="2" class="d-flex flex-column align-center border-lg pa-4">
@@ -135,20 +161,22 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-bash</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">Assembler(Intel) & Bash</h1>
                         </v-container>
-                        <p class="font-weight-medium">
+                        <v-progress-linear color="blue" model-value="99" :height="6"></v-progress-linear>
+                        <br>
+                        <p class="font-weight-medium text-align-justify">
                             Since my studies require complete in-depth knowledge of the computer, I adapted to the use of <b>Linux</b> and its functionalities, 
                             which is why creating <b>bash scripts</b> is an everyday part of my daily life, to facilitate processes, configure program startups 
                             or document management. Worked with bash for projects related to XML and HTML documents, C programming, Assembler and more.
                         </p>
                         <br>
-                        <p class="font-weight-medium">
+                        <p class="font-weight-medium text-align-justify">
                             Continuing with the in-depth study of computers, I began to use <b>ASM Intel</b> to work with processors of that brand. The knowledge acquired 
                             lies not only in basic instructions, but also in the correct handling of functions as standardized by <b>GCC</b>, complete knowledge of the use 
                             of the stack and building of the stack frame, arguments, <b>syscalls</b>, <b>interruptions</b> and peripherals. All this in both <b>32 and 64 bits</b>, along 
                             with their differences.
                         </p>
                         <br>
-                        <p class="font-weight-medium">
+                        <p class="font-weight-medium text-align-justify">
                             I am currently working on the implementation of a <b>kernel</b> that manages the hardware resources of a computer and show features of <b>Intel 
                             Protected Mode</b>.
                         </p>
@@ -159,6 +187,18 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-language-python</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">Python</h1>
                         </v-container>
+                        <v-progress-linear color="green" model-value="80" :height="6"></v-progress-linear>
+                        <br>
+                        <p class="font-weight-medium text-align-justify">
+                            Python is my preferred language for data analysis, automation, and web development. Its clear syntax and readability make it easy to write and maintain 
+                            code, allowing me to focus on solving problems rather than getting bogged down in complexity. 
+                        </p>
+                        <br>
+                        <p class="font-weight-medium text-align-justify">
+                            I leverage Python's powerful libraries, like Pandas and 
+                            NumPy, for data manipulation and analysis, as well as Flask and Django for building robust web applications. Whether I'm <b>scraping data</b> from the 
+                            web or creating <b>RESTful APIs</b>, Python provides the versatility I need to tackle diverse projects.
+                        </p>
                     </v-col>
 
                 </v-row>
@@ -173,6 +213,8 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-vuejs</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">Vue</h1>
                         </v-container>
+                        <v-progress-linear color="primary" indeterminate="" :height="6"></v-progress-linear>
+                        <br>
                         <p class="font-weight-medium">
 
                         </p>
@@ -185,6 +227,8 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-react</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">React Native</h1>
                         </v-container>
+                        <v-progress-linear color="yellow" model-value="50" :height="6"></v-progress-linear>
+                        <br>
                         <p class="font-weight-medium">
 
                         </p>
@@ -214,6 +258,20 @@
     .background-image-container.dark {
         background-image: url('../../assets/bg-dark2.jpg');
     }
+    .profile-image-container {
+        background-image: url('/src/assets/profile-tr.png');
+        background-size: cover;
+        background-position: center;
+        min-width: 200px; min-height: 200px; max-width: 200px; max-height: 200px;
+        margin-left: 25px;
+        margin-right: 25px;
+        transition: all 0.5s ease;
+    }
+    .profile-image-container:hover {
+        min-width: 250px; min-height: 250px; max-width: 250px; max-height: 250px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
     .nav-bar.sticky {
         backdrop-filter: blur(30px);
     }
@@ -238,8 +296,8 @@
 
 <script setup>
     import { ref } from 'vue';
-import Header from '../Header.vue';
-import EducationSection from '../sections/EducationSection.vue';
+    import Header from '../Header.vue';
+    import EducationSection from '../sections/EducationSection.vue';
 
     const about = ref(null);
     const education = ref(null);
@@ -293,8 +351,12 @@ import EducationSection from '../sections/EducationSection.vue';
         }
     });
 
-    const goToLink = (link) => {
-        window.open(link, '_blank');
-    };
+    const openWhatsApp = () => {
+      const phoneNumber = '1125648009';
+      const message = 'Hello Fede, i saw your portfolio...';
+      const encodedMessage = encodeURIComponent(message);
+      const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
+      window.open(url, '_blank');
+    }
 </script>
