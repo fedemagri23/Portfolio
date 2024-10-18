@@ -67,11 +67,20 @@
                         <v-icon class="text-colortext1 ma-2" size="64">mdi-earth</v-icon>
                         <h1 class="text-colortext1 font-weight-bold">English</h1>
                     </v-container>
+                    <v-container 
+                        @click="goToLink('https://www.cambridgeenglish.org/')"
+                        class="bg-secondary w-100 border-md rounded d-flex flex-row justify-center align-center cursor-pointer"
+                    >
+                        <h1>Institution: Cambridge</h1>
+                        <v-icon class="text-colortext1 mx-2" size="28">mdi-open-in-new</v-icon>
+                    </v-container>
+                    <v-container class="w-100 px-1 pt-6">
+                        <h2 class="font-weight-medium">Title: <b>First Certificate in English</b> </h2>
+                        <h2 class="font-weight-medium">Date: July 2021 </h2>
+                    </v-container>
                     <a href="StatementOfResult.pdf" download style="text-decoration: none; width: 100%;">
-                        <v-container
-                            class="bg-secondary w-100 border-md rounded d-flex flex-row justify-center align-center cursor-pointer"
-                        >
-                            <h1>Cambridge: <b>First Certificate in English</b></h1>
+                        <v-container class="bg-secondary w-100 border-md rounded d-flex flex-row justify-center align-center cursor-pointer">
+                            <h1>Doenload statement of result</h1>
                             <v-icon class="text-colortext1 mx-2" size="28">mdi-download</v-icon>
                         </v-container>
                     </a>
@@ -95,7 +104,7 @@
                         <h2 class="font-weight-medium">Start date: March 2022</h2>
                         <h2 class="font-weight-medium">Estimated end date: July 2027</h2>
                         <br>
-                        <h3 class="font-weight-medium">More: I have a university scholarship because I excelled in technical secondary school</h3>
+                        <h3 class="font-weight-medium">More: I have a university scholarship because I excelled in technical secondary school.</h3>
                     </v-container>
                 </v-col>
                 
@@ -135,22 +144,18 @@
                             <h1 class="text-colortext1 font-weight-bold">C & C++</h1>
                         </v-container>
                         <p class="font-weight-medium">
-                            One of my favorite languages, thanks to <b>C</b> I developed my knowledge and skills regarding the internal functioning 
-                            of the computer and how programs, compilers and linkeditors work.
+                            One of my favorite programming languages. Thanks to <b>C</b>, I developed my knowledge and skills regarding the internal workings of computers and how programs, compilers, and linkeditors work.
                         </p>
                         <br>
                         <p class="font-weight-medium">
-                            The contents that I handle without any problems are: Characteristics of the <b>imperative paradigm</b>, functions and 
-                            modularization, process <b>efficiency</b>, <b>recursion</b>, <b>library</b> use and construction, pointers, structs, <b>abstract data 
-                            types</b> and memory management.
+                            The topics I handle proficiently include: characteristics of the <b>imperative paradigm</b>, functions and modularization, process <b>efficiency</b>, <b>recursion</b>, <b>library</b> usage and construction, pointers, structs, <b>abstract data types</b>, and memory management.
                         </p>
                         <br>
                         <p class="font-weight-medium">
-                            My specialty is processing <b>large files</b> to get the output in the shortest time possible using structures like <b>AVL 
-                            trees</b>, <b>hash tables</b>, <b>linked lists</b> and occurrence vectors, and algorithms such as <b>binary seacrh</b>, DFS, BFS, 
-                            dijkstra, <b>merge sort</b>, <b>quick sort</b>, among others.
+                            My specialty lies in processing <b>large files</b> to achieve output in the shortest time possible, utilizing structures like <b>AVL trees</b>, <b>hash tables</b>, <b>linked lists</b>, and occurrence vectors, as well as algorithms such as <b>binary search</b>, DFS, BFS, Dijkstra, <b>merge sort</b>, <b>quick sort</b>, among others.
                         </p>
                     </v-col>
+
 
                     <v-col xs="6" sm="6" md="4" lg="4" xl="2" class="d-flex flex-column align-center border-lg pa-4">
                         <v-container class="d-flex flex-row justify-center align-center w-100" style="height: 128px;">
@@ -158,26 +163,27 @@
                             <h1 class="text-colortext1 font-weight-bold">Java</h1>
                         </v-container>
                         <p class="font-weight-medium">
-                            <b>Java</b> is the language that I use the most today due to the degree I am studying.
+                            <b>Java</b> is the language I use the most today due to my studies.
                         </p>
                         <br>
                         <p class="font-weight-medium">
-                            I have excellent knowledge of the <b>object-oriented paradigm</b>, with complete knowledge of <b>classes</b>, 
-                            <b>inheritance</b>, <b>interfaces</b>, <b>generics</b>, abstract classes, encapsulation, hiding, polymorphism, error messages and methods.
+                            I have a strong understanding of the <b>object-oriented paradigm</b>, with comprehensive knowledge of <b>classes</b>, 
+                            <b>inheritance</b>, <b>interfaces</b>, <b>generics</b>, abstract classes, encapsulation, hiding, polymorphism, exception handling, and methods.
                         </p>
                         <br>
                         <p class="font-weight-medium">
-                            In addition, implementing strategies for different needs, such as <b>iterators</b>, predicates, lambda functions, equals and <b>hashing</b>.
+                            Additionally, I implement strategies for various needs, such as <b>iterators</b>, predicates, lambda functions, equality checks, and <b>hashing</b>.
                         </p>
                         <br>
                         <p class="font-weight-medium">
-                            Taking advantage of all of the above, I usually use the algorithmic strategies of <b>divide & conquer</b>, backtracking, greedy and dynamic programming 
-                            to structure the different data structures that the language offers.
+                            Utilizing all of the above, I typically apply algorithmic strategies such as <b>divide and conquer</b>, backtracking, greedy algorithms, and dynamic programming 
+                            to structure the various data structures that the language offers.
                         </p>
                         <br>
                         <p class="font-weight-medium">
-                            Lastly, I use the following libraries: <b>Metaphone</b> (fuzzy text search) and <b>Lucene</b> (index for text search requests).
+                            Finally, I work with the following libraries: <b>Metaphone</b> (fuzzy text search) and <b>Lucene</b> (indexing for text search queries).
                         </p>
+
                     </v-col>
 
                     <v-col xs="6" sm="6" md="4" lg="4" xl="2" class="d-flex flex-column align-center border-lg pa-4">
@@ -199,6 +205,23 @@
                             <v-icon class="text-colortext1 ma-2" size="64">mdi-bash</v-icon>
                             <h1 class="text-colortext1 font-weight-bold">Assembler(Intel) & Bash</h1>
                         </v-container>
+                        <p class="font-weight-medium">
+                            Since my studies require complete in-depth knowledge of the computer, I adapted to the use of <b>Linux</b> and its functionalities, 
+                            which is why creating <b>bash scripts</b> is an everyday part of my daily life, to facilitate processes, configure program startups 
+                            or document management. Worked with bash for projects related to XML and HTML documents, C programming, Assembler and more.
+                        </p>
+                        <br>
+                        <p class="font-weight-medium">
+                            Continuing with the in-depth study of computers, I began to use <b>ASM Intel</b> to work with processors of that brand. The knowledge acquired 
+                            lies not only in basic instructions, but also in the correct handling of functions as standardized by <b>GCC</b>, complete knowledge of the use 
+                            of the stack and building of the stack frame, arguments, <b>syscalls</b>, <b>interruptions</b> and peripherals. All this in both <b>32 and 64 bits</b>, along 
+                            with their differences.
+                        </p>
+                        <br>
+                        <p class="font-weight-medium">
+                            I am currently working on the implementation of a <b>kernel</b> that manages the hardware resources of a computer and show features of <b>Intel 
+                            Protected Mode</b>.
+                        </p>
                     </v-col>
 
                     <v-col xs="6" sm="6" md="4" lg="4" xl="2" class="rounded-be-xl d-flex flex-column align-center border-lg pa-4">
