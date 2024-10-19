@@ -41,7 +41,9 @@
     </Section>
 
     <Section ref="education" class="bg-background w-100 ma-0 px-6" style="min-height: 100vh;">
-        <EducationSection/>
+        <transition name="slide2">
+            <EducationSection v-if="showED"/>
+        </transition>
     </Section>
 
     <Section ref="skills" class="bg-background h-50 w-100 ma-0 px-6" style="min-height: 100vh;">
@@ -68,12 +70,16 @@
 
             <Section ref="languages" class="w-100 ma-0 px-0" style="padding-top: 106px">
                 <h2>Programming languages</h2>
-                <ProgrammingLgSection/>
+                <transition name="slide2">
+                    <ProgrammingLgSection v-if="showPLG" class="appear"/>
+                </transition>
             </Section>
             
             <Section ref="frameworks" class="w-100 ma-0 px-0" style="padding-top: 106px">
                 <h2>Frameworks</h2>
-                <FrameworksSection/>
+                <transition name="slide2">
+                    <FrameworksSection v-if="showFW"/>
+                </transition>
             </Section>
             
         </v-col>
@@ -118,15 +124,28 @@
         transition: all 0.5s ease;
         opacity: 0;
     }
-    
     .slide-enter-to {
         opacity: 1;
     }
-
     .slide-leave-active {
         transition: all 0.5s ease;
     }
     .slide-leave-to {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+
+    .slide2-enter-active{
+        transition: all 1.2s ease;
+        opacity: 0;
+    }
+    .slide2-enter-to {
+        opacity: 1;
+    }
+    .slide2-leave-active {
+        transition: all 0.2s ease;
+    }
+    .slide2-leave-to {
         transform: translateY(-40px);
         opacity: 0;
     }
@@ -136,8 +155,8 @@
     import { ref } from 'vue';
     import Header from '../Header.vue';
     import EducationSection from '../sections/EducationSection.vue';
-import ProgrammingLgSection from '../sections/ProgrammingLgSection.vue';
-import FrameworksSection from '../sections/FrameworksSection.vue';
+    import ProgrammingLgSection from '../sections/ProgrammingLgSection.vue';
+    import FrameworksSection from '../sections/FrameworksSection.vue';
 
     const about = ref(null);
     const education = ref(null);
@@ -168,6 +187,11 @@ import FrameworksSection from '../sections/FrameworksSection.vue';
     var showBanner = ref(false);
     var showSkillNav = ref(false);
 
+    // in-sections
+    var showED = ref(false);
+    var showPLG = ref(false);
+    var showFW = ref(false);
+
     window.addEventListener("scroll", function(){
         var header = document.querySelector(".nav-bar");
         var item = document.querySelector(".nav-bar-item");
@@ -184,11 +208,35 @@ import FrameworksSection from '../sections/FrameworksSection.vue';
             showBanner.value = false;
         }
 
+        // Skills section
         if (window.scrollY >= 2.85*window.innerHeight){
             showSkillNav.value = true;
         } else {
             showSkillNav.value = false;
         }
+
+        // ED
+        if (window.scrollY >= 1.3*window.innerHeight){
+            showED.value = true
+        } else {
+            showED.value = false
+        }
+
+        // PLG
+        if (window.scrollY >= 2.6*window.innerHeight){
+            showPLG.value = true
+        } else {
+            showPLG.value = false
+        }
+
+        // FW
+        if (window.scrollY >= 3.8*window.innerHeight){
+            showFW.value = true
+        } else {
+            showFW.value = false
+        }
+
+
     });
 
     const openWhatsApp = () => {
