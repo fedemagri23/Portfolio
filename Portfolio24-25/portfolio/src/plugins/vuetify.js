@@ -15,6 +15,9 @@ import { createVuetify } from 'vuetify'
 // https://vuetifyjs.com/en/introduction/why-vuetify/#feature-guides
 export default createVuetify({
   theme: {
+    options: {
+      customProperties: true,
+    },
     defaultTheme: 'light',
     themes: {
       light: {
@@ -26,6 +29,7 @@ export default createVuetify({
           tertiary: colors.blueGrey.lighten5,
           colortext: colors.blueGrey.lighten5,
           colortext2: colors.shades.black,
+          pointer: colors.blueGrey.lighten2,
         }
       },
       dark: {
@@ -37,6 +41,7 @@ export default createVuetify({
           tertiary: colors.grey.darken4,
           colortext: colors.shades.white,
           colortext2: colors.shades.white,
+          pointer: colors.blueGrey.lighten4,
         }
       }
     }
