@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main class="bg-background">
+    <v-main class="bg-background f-flex flex-column justify-start align-center w-100">
       <div class="cursor"></div>
       <HomeScreen/>
     </v-main>

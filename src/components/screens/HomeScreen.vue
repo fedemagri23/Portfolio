@@ -1,34 +1,37 @@
 <template>
+
     <Header :sections="[
         {name: 'banner', scroll: () => {scrollToSection('banner')}},
         {name: 'about', scroll: () => {scrollToSection('about')}},
         {name: 'education', scroll: () => {scrollToSection('education')}},
         {name: 'skills', scroll: () => {scrollToSection('skills')}},
         {name: 'projects', scroll: () => {scrollToSection('projects')}}
-        ]"/>
+        ]"
+    />
+
     <Section ref="banner" class="background-image-container bg-background h-screen w-100 d-flex justify-center flex-column ma-0 py-0">
 
         <v-container class="d-flex flex-column justify-center align-center h-100 w-100">
             <v-container class="d-flex flex-column align-center h-50 w-66 rounded-lg elevation-4 pa-0" style="max-width: 760px">
-                <v-container class="bg-primary w-100 h-75 rounded-t-lg d-flex flex-row align-center pa-12">
-                    <v-container class="profile-image-container bg-tertiary rounded-circle"/>
-                    <v-container>
+                <v-row class="bg-primary w-100 rounded-t-lg d-flex flex-row align-center pa-12">
+                    <v-col class="profile-image-container bg-tertiary rounded-circle ma-2"/>
+                    <v-col>
                         <h1 class="text-colortext font-weight-medium" style="font-size: 2rem; line-height: 0.1;">Hey! I'am</h1>
                         <h1 class="text-colortext font-weight-medium" style="font-size: 3rem;">Federico Magri</h1>
                         <h2 class="text-colortext font-weight-light"><b><u>Computer Engineering</u></b> student from Argentina</h2>
-                    </v-container>
-                </v-container>
-                <v-container class="opacity-90 bg-tertiary d-flex flex-column justify-center align-center h-100 w-100 rounded-b-lg pa-0">
-                    <v-container class="d-flex flex-row justify-center align-center pa-0" style="height: 48px;">
-                        <v-btn @click="scrollToSection('about')" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px; cursor: none;">
+                    </v-col>
+                </v-row>
+                <v-row class="opacity-90 bg-tertiary d-flex flex-column justify-center align-center h-100 w-100 rounded-b-lg pa-0">
+                    <v-col class="d-flex flex-row justify-center align-center pa-2" style="min-height: 106px;">
+                        <v-btn @click="scrollToSection('about')" class="h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 192px; max-height: 56px; cursor: none;">
                             See portfolio
                         </v-btn>
-                        <v-btn @click="openWhatsApp()" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px; cursor: none;">
+                        <v-btn @click="openWhatsApp()" class="h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 192px; max-height: 56px; cursor: none;">
                             <v-icon class="mr-2" size="22">mdi-whatsapp</v-icon>
                             let's talk!
                         </v-btn>
-                    </v-container>
-                </v-container>
+                    </v-col>
+                </v-row>
             </v-container>   
         </v-container>
     </Section>
@@ -50,7 +53,7 @@
         <v-col style="padding-top: 106px;">
 
             <transition name="slide">
-                <div v-if="showSkillNav" class="d-flex flex-row align-center justify-center py-2 px-6 w-50" style="position: fixed; top: 10vh; right: 0; z-index: 9999;">
+                <div v-if="showSkillNav" class="d-flex flex-row align-center justify-center py-2 px-6 bg-red" style="position: fixed; top: 10vh; right: 0; z-index: 9999;">
                     <v-container @click="scrollToSection('languages')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 d-flex d-row justify-center align-center">
                         <v-icon class="mx-2" size="28">mdi-keyboard</v-icon>
                         <h3 class="font-weight-medium">Programming languages</h3>
@@ -106,7 +109,8 @@
         background-image: url('/src/assets/profile-tr.png');
         background-size: cover;
         background-position: center;
-        min-width: 200px; min-height: 200px; max-width: 200px; max-height: 200px;
+        aspect-ratio: 1 / 1;
+        min-width: 100px; min-height: 100px; max-width: 200px; max-height: 200px;
         margin-left: 25px;
         margin-right: 25px;
         transition: all 0.5s ease;
