@@ -49,15 +49,15 @@
 
             <transition name="slide">
                 <div v-if="showSkillNav" class="d-flex flex-row align-center justify-center py-2 px-6 w-50" style="position: fixed; top: 10vh; right: 0; z-index: 9999;">
-                    <v-container @click="scrollToSection('languages')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex d-row justify-center align-center">
+                    <v-container @click="scrollToSection('languages')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 d-flex d-row justify-center align-center">
                         <v-icon class="mx-2" size="28">mdi-keyboard</v-icon>
                         <h3 class="font-weight-medium">Programming languages</h3>
                     </v-container>
-                    <v-container @click="scrollToSection('frameworks')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex d-row justify-center align-center">
+                    <v-container @click="scrollToSection('frameworks')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 d-flex d-row justify-center align-center">
                         <v-icon class="mx-2" size="28">mdi-electron-framework</v-icon>
                         <h3 class="font-weight-medium">Frameworks</h3>
                     </v-container>
-                    <v-container @click="scrollToSection('knowledge')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 cursor-pointer d-flex d-row justify-center align-center">
+                    <v-container @click="scrollToSection('knowledge')" class="nav-bar-item bg-primary rounded-lg mx-3 my-1 pa-2 elevation-4 d-flex d-row justify-center align-center">
                         <v-icon class="mx-2" size="28">mdi-brain</v-icon>
                         <h3 class="font-weight-medium">Other knowledge</h3>
                     </v-container>
