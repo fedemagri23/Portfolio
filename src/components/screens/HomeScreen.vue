@@ -11,8 +11,8 @@
 
     <Section ref="banner" class="background-image-container bg-background h-screen w-100 d-flex justify-center flex-column ma-0 py-0">
 
-        <v-container class="d-flex flex-column justify-center align-center h-100 w-100">
-            <v-container class="d-flex flex-column align-center h-50 w-66 rounded-lg elevation-4 pa-0" style="max-width: 760px">
+        <v-row class="d-flex flex-column justify-center align-center h-100 w-100">
+            <v-col xs="10" sm="10" md="9" lg="8" xl="6" class="d-flex flex-column align-center h-50 rounded-lg elevation-4 pa-0" style="max-width: 760px">
                 <v-row class="bg-primary w-100 rounded-t-lg d-flex flex-row align-center pa-12">
                     <v-col class="profile-image-container bg-tertiary rounded-circle ma-2"/>
                     <v-col>
@@ -32,8 +32,9 @@
                         </v-btn>
                     </v-col>
                 </v-row>
-            </v-container>   
-        </v-container>
+            </v-col>   
+        </v-row>
+
     </Section>
 
     <Section ref="about" class="bg-background w-100 ma-0 px-6" style="min-height: 100vh;">
