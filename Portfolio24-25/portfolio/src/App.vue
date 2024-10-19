@@ -25,21 +25,12 @@
     border-radius: 50%;
     pointer-events: none;
     box-shadow: 0 0 20px rgb(var(--v-theme-pointer)),
-                0 0 60px rgb(var(--v-theme-pointer)),
-                0 0 100px rgb(var(--v-theme-pointer));
+                0 0 40px rgb(var(--v-theme-pointer)),
+                0 0 80px rgb(var(--v-theme-pointer)),
+                0 0 120px rgb(var(--v-theme-pointer));
     transform: translate(-50%, -50%);
     display: none;
     opacity: 0.5;
-  }
-  .cursor:before{
-    content: '';
-    position: absolute;
-    background: rgb(var(--v-theme-pointer));
-    width: 100px;
-    height: 100px;
-    opacity: 0.1;
-    transform: translate(-40%, -40%);
-    border-radius: 50%;
   }
   b {
         color: rgb(255, 136, 0);

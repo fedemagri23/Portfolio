@@ -20,10 +20,10 @@
                 </v-container>
                 <v-container class="opacity-90 bg-tertiary d-flex flex-column justify-center align-center h-100 w-100 rounded-b-lg pa-0">
                     <v-container class="d-flex flex-row justify-center align-center pa-0" style="height: 48px;">
-                        <v-btn @click="scrollToSection('about')" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px;">
+                        <v-btn @click="scrollToSection('about')" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px; cursor: none;">
                             See portfolio
                         </v-btn>
-                        <v-btn @click="openWhatsApp()" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px;">
+                        <v-btn @click="openWhatsApp()" class="w-25 h-100 bg-primary rounded-xl mx-4 text-capitalize elevation-2" style="max-width: 162px; cursor: none;">
                             <v-icon class="mr-2" size="22">mdi-whatsapp</v-icon>
                             let's talk!
                         </v-btn>
