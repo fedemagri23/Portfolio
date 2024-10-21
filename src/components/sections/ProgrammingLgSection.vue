@@ -16,7 +16,7 @@
             </p>
             <br>
             <p class="font-weight-medium">
-                My specialty lies in processing <b>large files</b> to achieve output in the shortest time possible, utilizing structures like <b>AVL trees</b>, <b>hash tables</b>, <b>linked lists</b>, and occurrence vectors, as well as algorithms such as <b>binary search</b>, DFS, BFS, Dijkstra, <b>merge sort</b>, <b>quick sort</b>, among others.
+                My specialty lies in processing <b>large files</b> to achieve output in the shortest time possible, utilizing structures like <b>AVL and BST trees</b>, <b>hash tables</b>, <b>linked lists</b>, and occurrence vectors, as well as algorithms such as <b>binary search</b>, DFS, BFS, Dijkstra, <b>merge sort</b>, <b>quick sort</b>, among others.
             </p>
         </v-col>
 
@@ -47,7 +47,7 @@
             </p>
             <br>
             <p class="font-weight-medium">
-                Finally, I work with the following libraries: <b>Metaphone</b> (fuzzy text search) and <b>Lucene</b> (indexing for text search queries).
+                Finally, I work with the following libraries: <b>Metaphone</b> (fuzzy text search), <b>Lucene</b> (indexing for text search queries) and <b>JavaFX</b> (graphic interfaces).
             </p>
 
         </v-col>
